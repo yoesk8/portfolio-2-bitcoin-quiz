@@ -80,35 +80,39 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: ' What is actually Bitcoin?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'A peer to peer digital currency', correct: true },
+      { text: 'A stock', correct: false },
+      { text: 'A ponzi scheme', correct: false },
+      {text: 'A speculative asset', correct: false}
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: "Who is Bitcoin's creator?",
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Satoshi Nakamoto', correct: true },
+      { text: 'Vitalik Buterin', correct: false },
+      { text: 'Craig Wright (lol)', correct: false },
+      { text: 'Elon Musk', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'What is currently the smallest unit of the Bitcoin currency?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'Bits', correct: false },
+      { text: 'doges', correct: false },
+      { text: 'shiba', correct: false },
+      { text: 'satoshi', correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'Which factor or who determines the market price of Bitcoin?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'The creator of Bitcoin', correct: false },
+      { text: 'Supply and Demand', correct: true },
+      {text: 'The world’s economy and politics', correct: false},
+      {text: 'The position of the stars', correct: false}
     ]
   }
 ]

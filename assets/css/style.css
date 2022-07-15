@@ -51,6 +51,7 @@ body.wrong {
     background-color: #4d4d4e;
     position: fixed;
     bottom: 0;
+    display: block;
 }
 
 .bitcoin-logo {
