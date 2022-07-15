@@ -40,6 +40,12 @@ body.wrong {
     
 }
 
+.footer {
+    width: 100vw;
+    height: 10%;
+    background-color: wheat;
+}
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
