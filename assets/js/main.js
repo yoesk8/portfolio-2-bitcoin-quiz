@@ -1,17 +1,19 @@
+//Start and Next Buttons
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+// 
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
+//Questions and questions index
 let shuffledQuestions, currentQuestionIndex
-
+// Event listeners for the start and next buttons
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
-
+//Main function that starts the game
 function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -19,12 +21,12 @@ function startGame() {
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
-
+// Sets the next question (but doesn't show it)
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
-
+// Displays the next question
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -38,7 +40,7 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button)
   })
 }
-
+// Resets the game, screen color
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
