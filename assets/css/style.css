@@ -1,7 +1,4 @@
-*,::before, *::after {
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 
 :root {
     --hue-neutral: 41.9;
@@ -29,6 +26,11 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
+.bitcoin-price {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
 .container {
     width: 800px;
     max-width: 80%;
@@ -36,14 +38,27 @@ body.wrong {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    margin-top: 40vh;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    
     
 }
 
 .footer {
     width: 100vw;
     height: 10%;
-    background-color: wheat;
+    background-color: #4d4d4e;
+    position: fixed;
+    bottom: 0;
+}
+
+.bitcoin-logo {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .btn-grid {
