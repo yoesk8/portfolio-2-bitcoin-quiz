@@ -6,7 +6,8 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 let shuffledQuestions, currentQuestionIndex;
 let resultsContainer = document.getElementById('results-container');
-let correctAnswers = 0;
+let correctAnswersNum = document.getElementById('correct-ans-num');
+let correctAnswers;
 // Event listeners for the start and next buttons
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -15,9 +16,10 @@ nextButton.addEventListener('click', () => {
 })
 //Main function that starts the game
 function startGame() {
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
+  startButton.classList.add('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
+  correctAnswers = 0;
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
@@ -35,7 +37,7 @@ function showQuestion(question) {
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct;
-      correctAnswers++;
+      
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
@@ -62,6 +64,7 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     resultsContainer.classList.remove('hide');
+    correctAnswersNum.innerText = correctAnswers - 10;
     startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
   }
@@ -70,7 +73,9 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
-    element.classList.add('correct')
+    correctAnswers++;
+    element.classList.add('correct');
+    
   } else {
     element.classList.add('wrong')
   }
@@ -116,6 +121,60 @@ const questions = [
       { text: 'Supply and Demand', correct: true },
       {text: 'The world’s economy and politics', correct: false},
       {text: 'The position of the stars', correct: false}
+    ]
+  },
+  {
+    question: 'What was the price of 1 Bitcoin when it was first traded on an online exchange in March 2010?',
+    answers: [
+      { text: '0.01 USD', correct: false },
+      { text: '0.003 USD', correct: true },
+      {text: '3 USD', correct: false},
+      {text: '30 USD', correct: false}
+    ]
+  },
+  {
+    question: 'Which was the first artist to accept Bitcoin for purchasing his records?',
+    answers: [
+      { text: 'Eminem', correct: false },
+      { text: '50 Cent', correct: true },
+      {text: 'Lady Gaga', correct: false},
+      {text: 'David Guetta', correct: false}
+    ]
+  },
+  {
+    question: 'In 2021, which country became the first one in the world to recognize Bitcoin as a currency?',
+    answers: [
+      { text: 'South Africa', correct: false },
+      { text: 'El Salvador', correct: true },
+      {text: 'Colombia', correct: false},
+      {text: 'France', correct: false}
+    ]
+  },
+  {
+    question: 'Bitcoin is based on which type of network to operate without the need for central authority?',
+    answers: [
+      { text: 'Peer to Peer', correct: true },
+      { text: 'Miner to owner', correct: false },
+      {text: 'Creator to Buyer', correct: false},
+      {text: 'Central Bank to Local Bank', correct: false}
+    ]
+  },
+  {
+    question: 'Which of the following is NOT a feature of a Bitcoin transaction?',
+    answers: [
+      { text: 'Uncensorable', correct: false },
+      { text: 'Decentralized', correct: false },
+      {text: 'Permisionless', correct: false},
+      {text: 'Reversible', correct: true}
+    ]
+  },
+  {
+    question: 'Which cryptography algorithm is used for hasting new blocks and running the network to create Bitcoins?',
+    answers: [
+      { text: 'PLA-196', correct: false },
+      { text: 'THX1138', correct: false },
+      {text: 'SHA-256', correct: true},
+      {text: 'ETHHASH', correct: false}
     ]
   }
 ]
