@@ -4,10 +4,14 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const musicToggle = document.getElementById('bckgrnd');
 let shuffledQuestions, currentQuestionIndex;
 let resultsContainer = document.getElementById('results-container');
 let correctAnswersNum = document.getElementById('correct-ans-num');
 let correctAnswers;
+
+
+
 // Event listeners for the start and next buttons
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -23,6 +27,27 @@ function startGame() {
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
+
+ // Starts and Pauses the background music on user click
+
+ musicToggle.addEventListener('click', function () {
+  toggleMusic();
+});
+
+function toggleMusic() {
+  let backgroundMusic = document.getElementById('background-music');
+  if (backgroundMusic.paused) {
+      backgroundMusic.play();
+      backgroundMusic.volume = 0.1;
+      //Sets the session storage to remember user choice from page to page 
+      window.localStorage.setItem('bckgrdMusic', 'true');
+  } else {
+      backgroundMusic.pause();
+      //Sets the session storage to remember user choice from page to page
+      window.localStorage.setItem('bckgrdMusic', 'false');
+  }
+}
+
 // Sets the next question (but doesn't show it)
 function setNextQuestion() {
   resetState()

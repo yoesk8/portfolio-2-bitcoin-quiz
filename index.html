@@ -14,7 +14,16 @@
 <body>
     <i class="fab fa-bitcoin fa-5x bitcoin-logo"></i>
    
-
+    <div class="audioContainer">
+      <p>Music</p>
+      <audio id="background-music" loop>
+          <source src="assets/audio/BitcoinSong.mp3" type="audio/mp3">
+      </audio>
+      <label class="audioSwitch">
+          <input id="bckgrnd" type="checkbox" aria-label="music-toggle">
+          <span id="background-slider" class="slider"></span>
+      </label>
+  </div>
 
     <div class="bitcoin-price">
         <h1 class="bitcoin-text">Bitcoin price today: £ <span id="stock-price">---</span></h1>
