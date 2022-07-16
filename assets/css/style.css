@@ -52,6 +52,7 @@ body.wrong {
     position: fixed;
     bottom: 0;
     display: block;
+    text-align: center;
 }
 
 .bitcoin-logo {

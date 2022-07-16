@@ -1,12 +1,12 @@
-//Start and Next Buttons
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-// 
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-//Questions and questions index
-let shuffledQuestions, currentQuestionIndex
+//Variables and constants used througout the code
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+let shuffledQuestions, currentQuestionIndex;
+let resultsContainer = document.getElementById('results-container');
+let correctAnswers = 0;
 // Event listeners for the start and next buttons
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -34,7 +34,8 @@ function showQuestion(question) {
     button.innerText = answer.text
     button.classList.add('btn')
     if (answer.correct) {
-      button.dataset.correct = answer.correct
+      button.dataset.correct = answer.correct;
+      correctAnswers++;
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
@@ -42,8 +43,9 @@ function showQuestion(question) {
 }
 // Resets the game, screen color
 function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add('hide')
+  clearStatusClass(document.body);
+  nextButton.classList.add('hide');
+  resultsContainer.classList.add('hide');
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
@@ -59,8 +61,9 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    resultsContainer.classList.remove('hide');
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
   }
 }
 
