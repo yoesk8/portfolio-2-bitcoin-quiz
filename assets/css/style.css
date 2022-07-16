@@ -63,6 +63,24 @@ body.wrong {
     
 }
 
+.audioContainer {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
+    margin-left: 5%;
+}
+
+.fa-linkedin, .fa-github {
+    color: white;
+    width: 32px;
+    height: 32px;
+
+    
+    display: inline-block;
+    margin: 5%;
+    
+}
 
 .btn-grid {
     display: grid;
