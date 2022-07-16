@@ -38,7 +38,6 @@ body.wrong {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    margin-top: 20vh;
     margin-left: auto;
     margin-right: auto;
     
@@ -47,12 +46,12 @@ body.wrong {
 
 .footer {
     width: 100vw;
-    height: 10%;
+    height: 60px;
     background-color: #4d4d4e;
     position: fixed;
     bottom: 0;
-    display: block;
     text-align: center;
+    
 }
 
 .bitcoin-logo {
@@ -73,12 +72,13 @@ body.wrong {
 
 .fa-linkedin, .fa-github {
     color: white;
-    width: 32px;
-    height: 32px;
-
+    display:inline-block;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    margin-left: auto;
     
-    display: inline-block;
-    margin: 5%;
     
 }
 
