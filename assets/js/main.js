@@ -21,8 +21,8 @@ nextButton.addEventListener('click', () => {
 })
 //Main function that starts the game
 function startGame() {
-  startButton.classList.add('hide');
   introContainerElement.classList.add('hide');
+  startButton.classList.add('hide');
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   correctAnswers = 0;

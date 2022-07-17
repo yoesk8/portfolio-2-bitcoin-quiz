@@ -15,12 +15,12 @@
     <i class="fab fa-bitcoin fa-5x bitcoin-logo"></i>
    
     <div class="audioContainer">
-      <h4>Music</h4>
+      <i class="fa fa-solid fa-music"></i> <h4> Music</h4>
       <audio id="background-music" loop>
           <source src="assets/audio/BitcoinSong.mp3" type="audio/mp3">
       </audio>
       <label class="audioSwitch">
-          <input id="bckgrnd" type="checkbox" aria-label="music-toggle">
+          <input id="bckgrnd" class="playbtn" type="button" value="Play/Pause" aria-label="music-toggle">
           <span id="background-slider" class="slider"></span>
       </label>
   </div>
@@ -29,16 +29,31 @@
         <h1 class="bitcoin-text">Bitcoin price today: £ <span id="stock-price">---</span></h1>
     </div>
     
-   <div class="intro-container-parent">
-    <div class="intro-container-child">
-    <h1> How much do you know about Bitcoin?</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-       Fugiat accusantium nam soluta sapiente iusto 
-      porro rerum! Ipsum, quaerat harum perspiciatis 
-      iure asperiores recusandae architecto tenetur,
-       facere amet voluptas minus quidem.</p>
-     </div>
+   <div class="container">
+    <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
     </div>
+    <div id="intro-container" class="">
+      <h3>What is Bitcoin?</h3>
+      <p>'Bitcoin is a bank in cyberspace, run by incorruptible software, offering a global, affordable, 
+        simple, & secure savings account to billions of people that don't have the option or desire to run their own hedge fund.'</p>
+        <p>-Michael Saylor-</p>
+        <h4>How much do YOU know about it??</h4>
+    </div>
+    <div id="results-container" class="hide">
+      <h1>You scored <span id="correct-ans-num">--</span> out of 10!</h1>
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+   </div>
     
 
   <div class="footer">

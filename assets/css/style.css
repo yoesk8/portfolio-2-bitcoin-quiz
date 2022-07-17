@@ -38,6 +38,7 @@ body.wrong {
     padding-right: 10vw;
 }
 
+
 .intro-container-parent {
     height: 50%;
     display: flex;
@@ -88,7 +89,7 @@ body.wrong {
     align-items: center;
     width: 125px;
     height: 40px;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .fa-linkedin, .fa-github {
