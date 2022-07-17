@@ -31,6 +31,18 @@ body.wrong {
     padding-right: 10vw;
 }
 
+.intro-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-child {
+    background-color: white;
+    width: 60vw;
+    height: 30vh;
+}
 .container {
     width: 800px;
     max-width: 80%;
