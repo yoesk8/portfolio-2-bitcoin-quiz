@@ -2,6 +2,7 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
+const introContainerElement = document.getElementById('intro-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const musicToggle = document.getElementById('bckgrnd');
@@ -21,6 +22,7 @@ nextButton.addEventListener('click', () => {
 //Main function that starts the game
 function startGame() {
   startButton.classList.add('hide');
+  introContainerElement.classList.add('hide');
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   correctAnswers = 0;
