@@ -56,7 +56,6 @@ function showQuestion(question) {
 }
 // Resets the game, screen color
 function resetState() {
-  clearStatusClass(document.body);
   nextButton.classList.add('hide');
   resultsContainer.classList.add('hide');
   while (answerButtonsElement.firstChild) {
@@ -66,7 +65,10 @@ function resetState() {
 
 function selectAnswer(e) {
   const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
+  const correct = selectedButton.dataset.correct;
+  if (correct) {
+    correctAnswers++
+  }
   
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -85,10 +87,9 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct');
-    correctAnswers++;
-    
+        
   } else {
-    element.classList.add('wrong')
+    element.classList.add('wrong');
   }
 }
 
