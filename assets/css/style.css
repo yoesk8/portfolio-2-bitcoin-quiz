@@ -104,6 +104,10 @@ body.wrong {
     
 }
 
+.fa-linkedin:hover, .fa-github:hover {
+    color: #f2a900;
+}
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
