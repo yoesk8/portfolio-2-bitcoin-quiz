@@ -92,8 +92,8 @@ body.wrong {
     margin-left: 10%;
 }
 
-.fa-linkedin, .fa-github {
-    color: white;
+.socials {
+    color: #f2a900;
     display:inline-block;
     font-size: 40px;
     line-height: 50px;
@@ -104,8 +104,8 @@ body.wrong {
     
 }
 
-.fa-linkedin:hover, .fa-github:hover {
-    color: #f2a900;
+.socials:hover {
+    color: white;
 }
 
 .btn-grid {
