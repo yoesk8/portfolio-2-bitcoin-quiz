@@ -1,11 +1,8 @@
 /* Media query for extra small screen sizes */
 @media only screen and (max-width: 400px) {
-    .intro-container {
-        position: fixed;
-        overflow: scroll;
-    }
-    
-   
+    body {
+      margin-bottom: 80px;
+    }     
 }
 
 
@@ -20,17 +17,79 @@ body {
 
     --hue: var(--hue-neutral);
     padding: 0;
-    margin: 0;
-    
+    margin-left: 0;
+    margin-right: 0;
     background-color: hsl(var(--hue), 100%, 47.45%);
 }
 
-body.correct {
-    --hue: var(--hue-correct);
+/* Audio Controls */
+
+
+.audioContainer {
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 40px;
 }
 
-body.wrong {
-    --hue: var(--hue-wrong);
+.audioContainer p {
+    font-size: 1em;
+    margin: 0 5px 0 5px;
+}
+
+/* Switch styling from W3schools guide */
+
+.audioSwitch {
+    position: absolute;
+    left: 10%;
+    width: 44px;
+    height: 24px;
+}
+
+.audioSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #c80000;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #c80000;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
 }
 
 .bitcoin-price {
@@ -39,17 +98,6 @@ body.wrong {
 }
 
 
-.intro-container-parent {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.intro-container-child {
-    width: 50vw;
-    height: 50vh;
-}
 
 
 
@@ -84,14 +132,6 @@ body.wrong {
     
 }
 
-.audioContainer {
-    display: flex;
-    align-items: center;
-    width: 125px;
-    height: 40px;
-    margin-left: 10%;
-}
-
 .socials {
     color: #f2a900;
     display:inline-block;
@@ -103,6 +143,7 @@ body.wrong {
     
     
 }
+
 
 .socials:hover {
     color: white;
