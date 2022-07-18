@@ -91,7 +91,7 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     resultsContainer.classList.remove('hide');
-    correctAnswersNum.innerText = correctAnswers - 10;
+    correctAnswersNum.innerText = correctAnswers;
     startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
   }
@@ -100,8 +100,8 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
-    correctAnswers++;
     element.classList.add('correct');
+    correctAnswers++;
     
   } else {
     element.classList.add('wrong')
