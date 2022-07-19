@@ -46,7 +46,7 @@ This web based application is designed to
 
 Wireframes for Bitcoin Quiz
 
-![Wireframe Desktop Site]
+![Wireframe-Desktop](assets/readme-images/Bitcoin-Quiz wireframe desktop.png)
 
 ![Wireframe Mobile Site]
 
