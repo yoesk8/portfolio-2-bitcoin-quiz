@@ -1,17 +1,18 @@
-# Yoel's Portfolio 1 website
+# Yoel's Portfolio 2 website
 
-## User-Centric Frontend Development Milestone Project.
+## Dynamic Front End Development Milestone Project.
 
-![Alt text](images/Screenshot_amIresponsive.png)
+![Amiresponsive-img](assets/readme-images/amiresponsive.png)
 
-Website presents Yoel's portfolio-1 project for a Personal trainer.
-Users will be able to find interesting content in easy and simple way.
+Website presents Yoel's portfolio-2 project for a Bitcoin Quiz.
+
+Users will be able to play a Quiz game to find out how much they know about bitcoin and learn even more about it with the FAQ page.
 
 This project is for educational purposes and can not be used as a template for a business use.
-Main aim is to build responsive website with HTML and CSS only. I will use Bootstrap framework to keep website consent and clear.
+Main aim is to build a responsive and interactive website with HTML, CSS and JavaScript. I will use Bootstrap framework to keep website consent and clear.
 
 
-## [View life website in github pages](https://yoesk8.github.io/portfolio-project-1/)
+## [View life website in github pages](https://yoesk8.github.io/portfolio-2-bitcoin-quiz/)
 ---
 
 # Table of contents
@@ -45,37 +46,34 @@ Main aim is to build responsive website with HTML and CSS only. I will use Boots
 
 ## Website owner business goals
 
-The main purpose of this website is to help present a Personal trainer and strength and conditioning coach to the public.
-Page owner can present himself, his professional development path, achievements and top skills.
-Also this website is the best place to show types of personal training, his qualifications and personal qualities that make him a suitable choice for his potential clients.
+The main purpose of this website is to test the user's knowledge on what Bitcoin is by playing an interactive game with 10 questions. The user can also find the answer to this questions and learn more about it in the FAQ page.
 
 
 ## User goals
 
 ### New user goals:
-- user is able to find information about the Personal trainer.
-- user can easily locate former and current client testimonials.
+- User is able to play the game with no issues
+- User can easily navigate between the Home and FAQ pages.
 
 
 ### Returning user goals:
-- user can learn more about the trainer.
-- user is able to find gallery with pictures of classes and the gym studio used for the sessions.
-- user can send a message to the instructor using a contact form.
+- user can learn more about the developer by using the social medial links in the footer of the site.
+- .
 
 ## User stories
 
-### As a business owner:
+### As a creator of the site:
 * I would like to present myself and my offer on the website clearly to potential customers.
 * I need to make sure that my current and new customers will find a professional help with their personal or group training programs.
 * I want my customers to be able to learn how to use my website intuitively and easily.
 * I would like to build and maintain relationship with potential and current customers.
 
-### As a new customer:
+### As a new :
 * I wish to find information about the personal trainer and check his qualifications.
 * I would like to be able to contact the trainer with any questions I may have about his services. 
 * I want to join in a fitness group with professional trainer, to find motivation and spend time actively.
 
-### As a returning customer:
+### As a returning :
 
 * I need to contact my trainer to reschedule my session.
 * I want to show my friend a gallery of pictures of the fitness studio where we can join for a group personal training session.
