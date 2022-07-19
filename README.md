@@ -62,12 +62,25 @@ Wireframes for Bitcoin Quiz
 
 * ### Fonts
 
+For my Fonts I used Bootstrap pre-defined font-family "Helvetica Neue", Helvetica, Arial, sans-serif.
+
+
 
 [Back to top](<#contents>)
 
 * ### Colour
 
+For the Colour scheme I used Bitcoin's logo color palette:
 
+Bitcoin Orange:
+Hex: #f2a900
+RGB: 242, 169, 0
+Bitcoin Grey:
+Hex: #4d4d4e
+RGB: 77, 77, 78
+Bitcoin White:
+Hex: #ffffff
+RGB: 255, 255, 255
 
 ![Colour Scheme](assets/readme-images/colour-scheme.png)
 
@@ -75,11 +88,6 @@ Wireframes for Bitcoin Quiz
 
 # Existing Features
 
-## Audio Controls
-
-
-
-![Audio Controls](assets/readme-images/audio-controls.png)
 
 ## Home Page 
 

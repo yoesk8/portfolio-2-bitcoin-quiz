@@ -14,11 +14,11 @@ let correctAnswers;
 
 
 // Event listeners for the start and next buttons
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 //Main function that starts the game
 function startGame() {
   introContainerElement.classList.add('hide');
@@ -26,8 +26,8 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   correctAnswers = 0;
-  questionContainerElement.classList.remove('hide')
-  setNextQuestion()
+  questionContainerElement.classList.remove('hide');
+  setNextQuestion();
 }
 
 
@@ -36,45 +36,45 @@ function startGame() {
 
 // Sets the next question (but doesn't show it)
 function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 // Displays the next question
 function showQuestion(question) {
-  questionElement.innerText = question.question
+  questionElement.innerText = question.question;
   question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
     if (answer.correct) {
       button.dataset.correct = answer.correct;
       
     }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
+  });
 }
 // Resets the game, screen color
 function resetState() {
   nextButton.classList.add('hide');
   resultsContainer.classList.add('hide');
   while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
 function selectAnswer(e) {
-  const selectedButton = e.target
+  const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   if (correct) {
-    correctAnswers++
+    correctAnswers++;
   }
   
   Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
+    setStatusClass(button, button.dataset.correct);
+  });
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
+    nextButton.classList.remove('hide');
   } else {
     resultsContainer.classList.remove('hide');
     correctAnswersNum.innerText = correctAnswers;
@@ -84,7 +84,7 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element)
+  clearStatusClass(element);
   if (correct) {
     element.classList.add('correct');
         
@@ -94,8 +94,8 @@ function setStatusClass(element, correct) {
 }
 
 function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
+  element.classList.remove('correct');
+  element.classList.remove('wrong');
 }
 
 const questions = [
@@ -189,11 +189,11 @@ const questions = [
       {text: 'ETHHASH', correct: false}
     ]
   }
-]
+];
 //Websocket for live bitcoin price
 let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcgbp@trade');
 let stockPriceElement = document.getElementById('stock-price');
 ws.onmessage = (event) => {
   let stockObject = JSON.parse(event.data);
   stockPriceElement.innerText = parseFloat(stockObject.p).toFixed(2);
-}
+};
