@@ -71,7 +71,7 @@ The main purpose of this website is to test the user's knowledge on what Bitcoin
 
 ## Structure of the website
 
-The website is designed to be easy and user-friendy on all type of devices. On desktop, tablet or mobile device there should be no difference for a user to have a fantastic experience. All parts are designed to achieve maximum user satisfaction. User will get some interaction from the interface as links and buttons will have a hover effects.
+The website is designed to be easy and user-friendy on all type of devices. On desktop, tablet or mobile device there should be no difference for a user to have a fantastic experience. All parts are designed to achieve maximum user satisfaction. User will get interaction from the game as well as links and buttons will have hover effects.
 
 ## Wireframes
 
@@ -108,7 +108,7 @@ For the color Palette I used the colors for the traditional Bitcoin logo:
 ___
 # Features
 
-The website consists of 3 pages. One of which includes the Quiz game to be played. Every page and section is accessible from the navigation menu.
+The website consists of 3 pages. One of which includes the Quiz game to be played. Every page and section is accessible from the navigation menu and will have a different color when active to facilitate navigation.
 
 
 The website has below features:
@@ -234,37 +234,29 @@ ___
 ---
 ## Issues found during site development
 
-* #### Footer not staying at the bottom of the screen in mobile devices
-![testing_issue_1](images/Screenshot_2022-05-03_at_11.20.57.png?raw=true)
-
-When displaying the website on mobile devices, my footer would move to the middle of the screen instead of staying at the bottom, blocking important elements and damaging the overall user experience.
-
-> I fixed it by wrapping the whole page in a div that would act as a container, then setting it's minimum height to 100% of the viewport (vh) and giving it a position of relative. As it is relative it's child elements (In this case the footer) could be set with absolute position based on it.
-
-> Then I set the footer position to absolute, sticking to the bottom:0 
+* ### Bootstrap overriding my style sheet
 
 
+![testing-issue-1](assets/readme-images/sendblue.png)
 
-* #### Form in Contact Page being out of place in mobile devices
+As I decided to add Bootstrap to my website at an advanced stage of development, I ran into the issue of having some of my styling overridden by bootstrap's predetermined styles.
 
-![testing_issue_1](images/Screenshot_2022-05-03_at_11.59.47.png?raw=true)
+> I fixed this by adding specific styling rules onto my css that replaced bootstrap styling due to hierarchy.
 
-When displayed on mobile devices the form in the contact page would look out of placed and misaligned
+![resolved1](assets/readme-images/sendgrey.png)
 
-> I fixed this by adding a media querie that would add an additional padding of 300px when the height of the screen dropped to below 1200px (Tablets and mobile devices).
 
-> I also had to set the top margin to 0 as it was pushing the whole div downwards
 
-> This pushes the form to a more centred position therefore improving user experience, below the solution:
 
-@media screen and (max-width:1200px) {
+* ### Counter for right answers displaying wrong number of correct answers.
 
-.contact {
-  padding-top: 300px;
-  margin-top: 0;
-    
-  }
+![testing_issue_2](assets/readme-images/counter2.png)
 
+This one was the toughest one to figure out for me, as I added the bootstrap stylesheet after creating the game logic, my counter stopped working properly. This was because the counter would add a one to the counter variable every time a specific class was added to the button chosen by the user (class:correct), however, because Bootstrap would also add a class on EVERY ocassion regardless of whether the answer was right or not, the counter would always show a perfect score (10) instead of only counting when the answer was correct.
+
+> I fixed this by moving the counter (correctAnswers++) from the styling if statement to the selectAnswer function where I created a specific if statement that would add the class when the answer was correct.
+
+![resolved](assets/readme-images/counter1.png)
 
 
 ## Performance testing
