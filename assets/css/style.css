@@ -5,7 +5,7 @@
     }     
 }
 
-
+/* Colors for entire site */
 
 :root {
     --hue-neutral: 41.9;
@@ -13,6 +13,7 @@
     --hue-correct: 120;
 }
 
+/* Body styling */
 body {
 
     --hue: var(--hue-neutral);
@@ -24,6 +25,7 @@ body {
     background-color: hsl(var(--hue), 100%, 47.45%);
 }
 
+/* Boostrap overriding styling */
 .navcar-color {
     background-color: #4d4d4e;
 }
@@ -36,86 +38,27 @@ body {
     background-color: #f2a900;
 }
 
-
-
-/* Audio Controls */
-
-
-.audioContainer {
-    display: flex;
-    align-items: center;
-    width: 125px;
-    height: 40px;
+.sendbtn:hover {
+     background-color: #4d4d4e;
 }
 
-.audioContainer p {
-    font-size: 1em;
-    margin: 0 5px 0 5px;
-}
-
-/* Switch styling from W3schools guide */
-
-.audioSwitch {
-    position: absolute;
-    left: 10%;
-    width: 44px;
-    height: 24px;
-}
-
-.audioSwitch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 34px;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 4px;
-    border-radius: 50%;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked+.slider {
-    background-color: #c80000;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #c80000;
-}
-
-input:checked+.slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-}
+/* Bitcoin Live price text and logo styling */
 
 .bitcoin-price {
     padding-left: 40vw;
     padding-right: 40vw;
 }
 
+.bitcoin-logo {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
 
-
+/* Main container for the Quiz div styling */
 
 .container {
     width: 800px;
@@ -130,6 +73,8 @@ input:checked+.slider:before {
     
 }
 
+/* Footer styling */
+
 .footer {
     width: 100vw;
     height: 60px;
@@ -140,13 +85,6 @@ input:checked+.slider:before {
     
 }
 
-.bitcoin-logo {
-    display: block;
-    width: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 .socials {
     color: #f2a900;
@@ -164,6 +102,9 @@ input:checked+.slider:before {
 .socials:hover {
     color: white;
 }
+
+
+/* Buttons during quiz styling */
 
 .btn-grid {
     display: grid;
@@ -203,6 +144,8 @@ input:checked+.slider:before {
     justify-content: center;
     align-items: center;
 }
+
+/* Class to hide divs when not in use */
 .hide {
     display: none;
 }

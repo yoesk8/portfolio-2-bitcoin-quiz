@@ -53,30 +53,21 @@ The main purpose of this website is to test the user's knowledge on what Bitcoin
 
 ### New user goals:
 - User is able to play the game with no issues
-- User can easily navigate between the Home and FAQ pages.
+- User can see the live price of Bitcoin on the Home page.
+- User can easily navigate between the Home, Contact and FAQ pages.
 
 
 ### Returning user goals:
-- user can learn more about the developer by using the social medial links in the footer of the site.
-- .
+- User can learn more about the developer by using the social medial links in the footer of the site.
+- User can get in touch with the Developer by using the contact page.
 
 ## User stories
 
 ### As a creator of the site:
-* I would like to present myself and my offer on the website clearly to potential customers.
-* I need to make sure that my current and new customers will find a professional help with their personal or group training programs.
-* I want my customers to be able to learn how to use my website intuitively and easily.
-* I would like to build and maintain relationship with potential and current customers.
+* I would like to display my abbilities as a web developer.
+* I would like to educate all visitors on the Basics of what Bitcoin is and isn't.
 
-### As a new :
-* I wish to find information about the personal trainer and check his qualifications.
-* I would like to be able to contact the trainer with any questions I may have about his services. 
-* I want to join in a fitness group with professional trainer, to find motivation and spend time actively.
 
-### As a returning :
-
-* I need to contact my trainer to reschedule my session.
-* I want to show my friend a gallery of pictures of the fitness studio where we can join for a group personal training session.
 
 ## Structure of the website
 
@@ -94,7 +85,6 @@ I used website miro.com to create the wireframes for desktop, tablet and mobile 
 
 ![Tablet and Mobile Wireframes](assets/readme-images/Bitcoin-Quiz-wireframe-Home-Page-(Mobile).png) 
 ![Tablet and Mobile Wireframes FAQ Page](assets/readme-images/Bitcoin-Quiz-wireframe-mobile-FAQ.png)
-
 
 
 ## Surface
@@ -118,21 +108,21 @@ For the color Palette I used the colors for the traditional Bitcoin logo:
 ___
 # Features
 
-The website consists of 3 pages. One of which is divided into 3 sections. Every page and section is accessible from the navigation menu.
+The website consists of 3 pages. One of which includes the Quiz game to be played. Every page and section is accessible from the navigation menu.
 
 
 The website has below features:
 
 ## Navigation bar
 
-* #### Navigation bar is visible on the top of each website. It is responsive and will adapt to mobile devices by a change into a burger menu.
+* #### Navigation bar is visible on the top of each website. It is responsive and by default collapsed into a burger menu.
 * Navigation scheme:
 
     * On left side there is a logo. It can be used as navigation link to the main page.
-    * On right side there are three links or a burger menu.  It contains:
+    * On right side there are three links collapsed into a burger menu.  It contains:
         * Home
+        * FAQ
         * Contact
-        * Gallery
 
 
 
@@ -143,31 +133,26 @@ Each link will open in a separate tab in a browser. I've also added hover effect
 
 ## Home
 
-* ### About section
-
-    * About section includes a description of the personal trainer's personna, qualities, qualifications and approach to personal training
-
-* ### Testimonials section
-
-    * This section includes 3 separate testimonials from former and current clients of the personal trainer in question.
+*  The home Page comprises of:
+ * A live price of Bitcoin displayed underneath the navbar, this is achieved by using the [Binance API](https://www.binance.com/en/binance-api) with the help of a Websocket.
+ * A quiz game contained inside a Div for easy readability, the game consists of 10 questions, the color of the buttons containing the questions change to either green or red depending on whether the answer was correct or not.
 
 
 
-## Gallery
+## FAQ
 
-* This page has pictures of 1 on 1 training session plus pictures of the studio used for the training and its facilities 
+* This page has 6 common questions about bitcoin, it was created with the help of [Bootstrap's Accordion](https://getbootstrap.com/docs/5.0/components/accordion/) 
 
 ## Contact
 
-* Contact form is a main part on this site. User can contact by filling a form with topic of interest.
+* User can get in touch with the creator of the website by filling a form with topic of interest.
 There's also an aditional text field to include any additional questions.
 
 ##  Future implementations
 
 
-* Add new page with personal training packages descriptions.
-* A blog site with fitness advises.
-* Login site for paid content including videos, exercise's how to, meal planning and healthy meals recipes.
+* Add new page with useful Bitcoin resources )(Books, podcasts, blogs, etc)
+* Add page that displays the price of bitcoin denominated in commodities (Gold, Silver, Oil, Copper, etc)
 
 
 [Back to Table of contents](#table-of-contents)
@@ -179,6 +164,9 @@ ___
 
 ### CSS
 * As a style language.
+
+### JavaScript
+* As a programming language
 
 ### Bootstrap 
 * Bootstrap as a CSS framework to keep responsive, mobile first aproach.
@@ -196,7 +184,7 @@ ___
 ### Gitpod
 * As a development hosting platform.
 
-### Balsamiq.cloud
+### Miro.com
 * As a wireframing tool.
 
 
@@ -215,41 +203,32 @@ ___
 ## Compatibility testing
  Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in Chrome developer tools. 
  
- I tested on hardware devices such as: Ipad air with iOS, Iphone 13 mini with iOS 15.4, Macbook air with MacOS
+ I tested on hardware devices such as: Ipad air with iOS, Iphone 13 mini with iOS 15.4, Macbook air with MacOS and Surface Pro with windows 10
 
 
 ## User stories testing
 
-### As a business owner:
+### As a website owner:
 
-- I would like to present myself and my offer on the website clearly to potential customers.
-    > Name, photo of the instructor and qualifications are on the Home Page in the About section
-
-- I need to make sure that my current and new customers will be able to contact me with any questions on training, exercises or business enquiries
-    > Customers can achieve this by contacting through contact form. They can choose their topic of interest or goal and describe their needs in a message box.
-
-- I want my customers to be able to learn how to use my website intuitively and easily.
-    > Each site has a fixed navigation menu and is accessible at all times. All content is presented with minimalistic approach.
-
-- I would like to build and maintain relationship with potential and current customers.
-    > Customers are able to find a links to social channels at the bottom of each page. Alternatively they can contact via the contact form.
+-  I would like to display my abbilities as a web developer.
+   > User can interact with the site by playing a game that keeps track of the answers chosen during the game and see their final result once finished
+- I would like to educate all visitors on the Basics of what Bitcoin is and isn't.
+   > User can use the FAQ page to read the answers to 6 of the most asked questions about Bitcoin, the user can also get in touch with the developer to ask further questions
 
 
-### As a new customer:
-- I wish to find information about the personal trainer and check his qualifications.
-    > User can see essential description on the home page, specifically in about section.
-
-- I would like to get in touch with the trainer to ask him about his approach on programing training cycles.
+### As a new user:
+- I want to play a game to learn about Bitcoin
+   > User can play a game containing 10 interesting facts about Bitcoin
+- I want to know what the price of Bitcoin is at the moment
+   > User can see the live price of Bitcoin displayed in the Home screen
+- I would like to get in touch with the creator of the site to ask him about his web developing skills or to learn more about bitcoin.
     > User can find a contact form in contact page. 
 
 
-### As a returning customer:
-- I need to contact my trainer to reschedule my session.
-    > User can find an option 'Reschedule my session' in the contact form in contact page. Alternatively can use social channels found at the bottom of the page.
+### As a returning user:
+- I need to find more information about the skills and projects that the developer may have worked on.
+    > User can use the LinkedIn or GitHub social links on the footer of the site or use the contact form to get in touch directly with the developer
 
-
-- I want to show my friend pictures of the fitness studio where we can join for a 2 on 1  personal training session.
-    > Gallery page has pictures of both the studio and sessions with other clients in development.
 
 
 ---
