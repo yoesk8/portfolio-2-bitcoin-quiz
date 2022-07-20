@@ -133,7 +133,7 @@ Each link will open in a separate tab in a browser. I've also added hover effect
 
 ## Home
 
-*  The home Page comprises of:
+  The home Page comprises of:
  * A live price of Bitcoin displayed underneath the navbar, this is achieved by using the [Binance API](https://www.binance.com/en/binance-api) with the help of a Websocket.
  * A quiz game contained inside a Div for easy readability, the game consists of 10 questions, the color of the buttons containing the questions change to either green or red depending on whether the answer was correct or not.
 
@@ -273,7 +273,7 @@ I noticed that this tests scores vary from time to time and depends on external 
 
 
 ## Code Validation
- At the and of the project I used two websites to validate my code
+ At the end of the project I used three websites to validate my code:
  
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
 
