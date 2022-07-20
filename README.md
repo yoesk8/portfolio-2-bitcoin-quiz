@@ -270,12 +270,11 @@ When displayed on mobile devices the form in the contact page would look out of 
 ## Performance testing
 
 I run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool to check performance of the website.
-I had to do several changes to improve performance, specially replacing images for lighter formats such as .webp which improved the performance significantly. Screenshots are presented below:
-
+Screenshots are presented below:
 
 
 Final results:
-![performance_final](images/Screenshot_2022-05-03_at_14.08.14.png?raw=true)
+![performance_final](assets/readme-images/lighthouse-testing.png)
 
 I noticed that this tests scores vary from time to time and depends on external libraries as well. 
 
@@ -286,8 +285,9 @@ I noticed that this tests scores vary from time to time and depends on external 
  
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
 
-
  * [Nu Html Checker](https://validator.w3.org/) to test HTML
+
+ * [JShint](https://jshint.com/) to test JavaScript
 
 
 [Back to Table of contents](#table-of-contents)
@@ -300,20 +300,20 @@ I used push command in Gitpod to save changes into GitHub.
 
 To deploy a project I had to:
 
-* Log in to GitHub and click on repository to deploy ([portfolio-project-1](https://yoesk8.github.io/portfolio-project-1/))
+* Log in to GitHub and click on repository to deploy [portfolio-project-2-Bitcoin-Quiz](https://yoesk8.github.io/portfolio-2-bitcoin-quiz/)
 * select `Settings` and find GitHub Pages section at the very bottom of the page
 * from source select `root` and then `main` branch.
 * click `save` and page was deployed after auto-refresh.
->  Your site is published at https://yoesk8.github.io/portfolio-project-1/
+>  Your site is published at https://yoesk8.github.io/portfolio-2-bitcoin-quiz/
 
 To run localy:
-* Log in to GitHub and click on repository to download ([portfolio-project-1](https://yoesk8.github.io/portfolio-project-1/))
+* Log in to GitHub and click on repository to download [portfolio-project-2-Bitcoin-Quiz](https://github.com/yoesk8/portfolio-2-bitcoin-quiz)
 * select `Code` and click Download the ZIP file.
 * after download you can extract the file and use it in your local environment 
 
 Alternatively you can [Clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 or [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
-this repository ([portfolio-project-1](https://yoesk8.github.io/portfolio-project-1/)) into your github account.
+this repository [portfolio-project-2-Bitcoin-Quiz](https://github.com/yoesk8/portfolio-2-bitcoin-quiz) into your github account.
 
 [Back to Table of contents](#table-of-contents)
 ___
@@ -328,56 +328,34 @@ ___
 
     * [css-tricks.com](https://css-tricks.com/)
 
+    * [youtube.com/webdevsimplified](https://youtu.be/riDzcEQbX6k) I followed this tutorial to create the quiz that was later modified
+
+    * [youtube.com/MorganPage](https://youtu.be/XXuUNZIQUVA) I followed this tutorial to create the websocket that would display the live price of Bitcoin in the Home Page.
+
     * [getbootstrap.com/docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
-        I used code for navbar and the form in contact page from Bootstrap.
-    * [stackoverflow.com](https://stackoverflow.com/) I used stack overflow constantly whenever I was unsure about HTML or CSS syntax or wanted to find an easier more stream-lined way of doing things
+        I used code for [navbar](https://getbootstrap.com/docs/5.2/components/navbar/), [accordion](https://getbootstrap.com/docs/5.2/components/accordion/)from Bootstrap.
+
+    * [MDBootstrap](https://mdbootstrap.com/docs/b4/jquery/forms/contact/) I used this contact form for the contact page.
+
+    * [stackoverflow.com](https://stackoverflow.com/) I used stack overflow constantly whenever I was unsure about HTML, CSS or JavaScript   syntax or wanted to find an easier more stream-lined way of doing things.
    
 
-* Other Tools:
-  
-   * [ezgif.com](https://ezgif.com/jpg-to-webp/) I used ezgif to convert my images to lighter formats which improved the performance of the site significantly
 
 ### Code
 
 
-* Bootstrap: [Navbar](https://getbootstrap.com/docs/4.0/components/navbar/)
-* MDBootstrap: [Sticky footer](https://mdbootstrap.com/snippets/standard/mdbootstrap/2886162#html-tab-view)
-* Bootstrap: [Form](https://getbootstrap.com/docs/4.5/components/forms/)
-* [mdbootstrap.com](https://mdbootstrap.com/snippets/standard/mdbootstrap/2886162#html-tab-view) I used and modified this footer with social media icons
-* [https://bbbootstrap.com/](https://bbbootstrap.com/snippets/simple-contact-form-74408136) I used and modified this form
+* MDBootstrap: [Contact Form](https://mdbootstrap.com/docs/b4/jquery/forms/contact/)
+* Bootstrap: [Offcanvas Navbar](https://getbootstrap.com/docs/4.5/components/navbar/)
+
 
 ### General Content:
 
-*  Testimonials:  [trustpilot.com](https://uk.trustpilot.com/review/westlondonpersonaltraining.co.uk)
+*  Quotes used in Main Div:  [coinsource.com](https://blog.coinsource.net/20-famous-and-infamous-quotes-about-bitcoin/#:~:text=%E2%80%9CBitcoin%20is%20a%20technological%20tour%20de%20force.%E2%80%9D&text=%E2%80%9CI%20do%20think%20bitcoin%20is,something%20like%20change%20the%20world.%E2%80%9D&text=%E2%80%9CBitcoin%20is%20going%20to%20change,Africa%2C%20but%20for%20everywhere.%E2%80%9D)
 
+* FAQ questions [bitcoin.org](https://bitcoin.org/en/faq#what-are-the-advantages-of-bitcoin)
 
+* Game questions and answers [welovequizzes.com](https://www.welovequizzes.com/bitcoin-quiz-questions-and-answers/)
 
-
-
-### Images:
-
-#### Pexels.com:
-* [images/pexels-thisisengineering-3912953.jpg](https://www.pexels.com/photo/man-in-black-crew-neck-t-shirt-standing-in-front-of-boxing-gloves-3912953/) Photo by ThisIsEngineering from Pexels 
-
-* [images/pexels-thisisengineering-3912956.jpg](https://www.pexels.com/photo/person-holding-black-tablet-3912956/) Photo by ThisIsEngineering from Pexels
-
-* [images/pexels-thisisengineering-3912952.jpg](https://www.pexels.com/photo/person-holding-black-smartphone-3912952/) Photo by ThisIsEngineering from Pexels 
-
-* [images/pexels-pixabay-416717.jpg](https://www.pexels.com/photo/athlete-barbell-bodybuilder-bodybuilding-416717/) Photo by Pixabay from Pexels
-
-* [images/pexels-bruno-bueno-2204196.jpg](https://www.pexels.com/photo/man-lying-while-doing-barbell-2204196/) Photo by Bruno Bueno from Pexels
-
-* [images/pexels-ivan-samkov-4162451.jpg](https://www.pexels.com/photo/black-and-red-dumbbells-4162451/) Photo by Ivan Samkov from Pexels
-
-* [images/pexels-amar-preciado-9958667.jpg"](https://www.pexels.com/photo/people-in-gym-working-out-with-weightlifting-9958667/) Photo by Amar Preciado from Pexels
-
-* [images/pexels-andres-ayrton-6551097.jpg](https://www.pexels.com/photo/young-asian-male-trainer-checking-fitness-equipment-while-instructing-overweight-female-6551097/) Photo by Andres  Ayrton from Pexels
-
-* [images/pexels-koolshooters-9944640.jpg](https://www.pexels.com/photo/two-people-doing-boxing-9944640/) Photo by KoolShooters from Pexels
-
-* [images/pexels-thisisengineering-3912516.jpg](https://www.pexels.com/photo/man-in-black-crew-neck-t-shirt-standing-inside-boxing-ring-3912516/) Photo by ThisIsEngineering from Pexels 
-
-* [images/pexels-thisisengineering-3912952.jpg](https://www.pexels.com/photo/person-holding-black-smartphone-3912952/) Photo by ThisIsEngineering from Pexels 
 
 
 [Back to Table of contents](#table-of-contents)
@@ -389,17 +367,17 @@ ___
 
 ### Home Page
 
-![Home-Page]()
-![About-Me](images/Screenshot_about_me.png)
-![Testimonials](images/Screenshot_testimonials_page.png)
+![Home-Page](assets/readme-images/home-screenshot.png)
+
+
 
 ### Contact Page
 
-![Contact Page](images/Screenshot_contact_page.png)
+![Contact](assets/readme-images/contact-screenshot.png)
 
-### Gallery Page
+### FAQ Page
 
-![Gallery Page](images/screenshot_gallery.png)
+![FAQ](assets/readme-images/FAQ-screenshot.png)
 
 
 [Back to Table of contents](#table-of-contents)
