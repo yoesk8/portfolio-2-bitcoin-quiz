@@ -68,6 +68,10 @@ function selectAnswer(e) {
   const correct = selectedButton.dataset.correct;
   if (correct) {
     correctAnswers++;
+    alert("Wel done! That's correct!")
+  }
+  else{
+    alert("Oops, that's not right :(")
   }
   
   Array.from(answerButtonsElement.children).forEach(button => {
@@ -78,6 +82,7 @@ function selectAnswer(e) {
   } else {
     resultsContainer.classList.remove('hide');
     correctAnswersNum.innerText = correctAnswers;
+    questionContainerElement.classList.add('hide');
     startButton.innerText = 'Restart';
     startButton.classList.remove('hide');
   }

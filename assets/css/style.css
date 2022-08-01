@@ -5,6 +5,12 @@
     }     
 }
 
+/*Overriding Bootstrap active button styling*/
+
+.btn:active{
+    
+}
+
 /* Colors for entire site */
 
 :root {
