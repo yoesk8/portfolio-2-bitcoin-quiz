@@ -5,7 +5,9 @@ const questionContainerElement = document.getElementById('question-container');
 const introContainerElement = document.getElementById('intro-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
-
+const greatscore = document.getElementById('greatscore');
+const goodscore = document.getElementById('goodscore');
+const badscore = document.getElementById('badscore');
 let shuffledQuestions, currentQuestionIndex;
 let resultsContainer = document.getElementById('results-container');
 let correctAnswersNum = document.getElementById('correct-ans-num');
@@ -58,6 +60,10 @@ function showQuestion(question) {
 function resetState() {
   nextButton.classList.add('hide');
   resultsContainer.classList.add('hide');
+  greatscore.classList.add('hide');
+  goodscore.classList.add('hide');
+  badscore.classList.add('hide');
+
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -68,7 +74,7 @@ function selectAnswer(e) {
   const correct = selectedButton.dataset.correct;
   if (correct) {
     correctAnswers++;
-    alert("Wel done! That's correct!")
+    alert("Well done! That's correct!")
   }
   else{
     alert("Oops, that's not right :(")
@@ -81,9 +87,18 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide');
   } else {
     resultsContainer.classList.remove('hide');
+    if (correctAnswers >= 9){
+      greatscore.classList.remove('hide');
+    }
+    else if (correctAnswers >= 6){
+      goodscore.classList.remove('hide');
+    }
+    else {
+      badscore.classList.remove('hide');
+    }
     correctAnswersNum.innerText = correctAnswers;
     questionContainerElement.classList.add('hide');
-    startButton.innerText = 'Restart';
+    startButton.innerText = 'Play Again!';
     startButton.classList.remove('hide');
   }
 }
