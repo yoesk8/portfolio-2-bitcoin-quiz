@@ -2,7 +2,7 @@
 
 ## Dynamic Front End Development Milestone Project.
 
-![Amiresponsive-img](assets/readme-images/amiresponsive.png)
+![Amiresponsive-img](assets/readme-images/amiresponsive-fixed.png)
 
 Website presents Yoel's portfolio-2 project for a Bitcoin Quiz.
 
@@ -135,13 +135,13 @@ Each link will open in a separate tab in a browser. I've also added hover effect
 
   The home Page comprises of:
  * A live price of Bitcoin displayed underneath the navbar, this is achieved by using the [Binance API](https://www.binance.com/en/binance-api) with the help of a Websocket.
- * A quiz game contained inside a Div for easy readability, the game consists of 10 questions, the color of the buttons containing the questions change to either green or red depending on whether the answer was correct or not.
+ * A quiz game contained inside a Div for easy readability, the game consists of 10 questions, the color of the buttons containing the questions change to either green or red depending on whether the answer was correct or not and an alert box that pops up whenever the user selects his answer telling him whether the answer was correct or not.
 
 
 
 ## FAQ
 
-* This page has 6 common questions about bitcoin, it was created with the help of [Bootstrap's Accordion](https://getbootstrap.com/docs/5.0/components/accordion/) 
+* This page has 6 common questions about bitcoin, there is a brief paragraph describing the page at the top and a link to the contact form in case the user has additional questions. it was created with the help of [Bootstrap's Accordion](https://getbootstrap.com/docs/5.0/components/accordion/) 
 
 ## Contact
 
@@ -246,7 +246,18 @@ As I decided to add Bootstrap to my website at an advanced stage of development,
 ![resolved1](assets/readme-images/sendgrey.png)
 
 
+* ### Contact form stretching to cover the entire width of the screen therefore making some text hard to read
 
+> I fixed this by adding some padding to the contact form div and a media query that makes the padding even larger when on extra-small screens, therefore pushing other elements 
+downward and improving readability.
+
+![resolved4](assets/readme-images/contact-fixed.png)
+
+* ### Summnary screen not making it clear that the game was finished
+
+> I fixed this by adding the 'hide' class to the div that contains the questions once the 10 questions have been answered, also by adding some feedback based on the result of the user.
+
+![resolved3](assets/readme-images/summary-div.png)
 
 * ### Counter for right answers displaying wrong number of correct answers.
 
