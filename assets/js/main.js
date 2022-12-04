@@ -106,10 +106,12 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
-    element.classList.add('correct');
+    element.disabled = true;
+    element.classList.add('btn-success');
         
   } else {
-    element.classList.add('wrong');
+    element.disabled = true;
+    element.classList.add('btn-danger');
   }
 }
 
